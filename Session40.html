@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+           @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+
+           body{
+                font-family: Gemunu Libre;
+                text-align: center;
+                background: linear-gradient( 135deg, pink, rgb(0, 0, 255));
+                color: cyan;
+            }
+
+            .div1{
+                height: 500px;
+                width: 500px;
+                background-color: white;
+                margin: auto;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+
+            }
+            #dr{
+                font-size: 28;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <div  class="div1">
+            <div  class="div2">
+            <input id="in" type="text" placeholder="1st value">
+            <input id="if" type="text" placeholder="2nd value">
+            </div>
+            <div>
+            <input type="button" value="ADD" onclick="im()">
+            <input type="button" value="SUBTRACT" onclick="on()">
+            <input type="button" value="MULTIPLY" onclick="of()">
+            <input type="button" value="DIVIDE" onclick="at()">
+            </div>
+        </div>
+        <p>The result is</p>
+        <p id="dr"></p>
+    </body>
+    <script>
+        function im(){
+        var val1 =parseInt(document.getElementById("in").value)
+        var val2 =parseInt(document.getElementById("if").value)
+        var dr=document.getElementById("dr");
+        dr.innerHTML=val1+val2
+        }
+
+        function on(){
+        var val1 =parseInt(document.getElementById("in").value)
+        var val2 =parseInt(document.getElementById("if").value)
+        var dr=document.getElementById("dr");
+        dr.innerHTML=val1-val2
+        }
+
+        function of(){
+        var val1 =parseInt(document.getElementById("in").value)
+        var val2 =parseInt(document.getElementById("if").value)
+        var dr=document.getElementById("dr");
+        dr.innerHTML=val1*val2
+        }
+
+        function at(){
+        var val1 =parseInt(document.getElementById("in").value)
+        var val2 =parseInt(document.getElementById("if").value)
+        var dr=document.getElementById("dr");
+        dr.innerHTML=val1/val2
+        }
+
+
+    </script>
+</html>
